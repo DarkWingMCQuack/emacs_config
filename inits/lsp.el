@@ -5,7 +5,12 @@
   (lsp-print-performance nil)
   (lsp-auto-guess-root t)
   :hook
-  ((go-mode c-mode c++-mode python-mode) . lsp)
+  (go-mode . lsp)
+  (python-mode . lsp)
+  (c++-mode . lsp)
+  (c-mode . lsp)
+  (scala-mode . lsp)
+  (lsp-mode . lsp-lens-mode)
   :config
   ;; (require 'lsp-clients)
   (evil-leader/set-key

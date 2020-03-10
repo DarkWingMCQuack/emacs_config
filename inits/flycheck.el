@@ -1,3 +1,3 @@
 (use-package flycheck
   :init
-  (global-flycheck-mode t))
+  (global-flycheck-mode))

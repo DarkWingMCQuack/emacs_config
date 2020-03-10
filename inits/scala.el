@@ -1,40 +1,20 @@
-(use-package scala-mode
-  :pin melpa
-  :interpreter ("scala" . scala-mode)
-  :hook
-  (scala-mode-hook . ensime-mode))
-
-;; ENhanced Scala Interaction Mode for text Editors
-(use-package ensime
-  :pin melpa ;; pining to melpa uses cutting-edge snapshot version
-  :commands ensime ensime-mode
-  :config
-  (evil-leader/set-key
-    "i" 'ensime-import-type-at-point)
-
-  (setq ensime-sem-high-enabled-p nil
-        ensime-use-helm t
-        ensime-completion-style 'company
-        ensime-startup-notification nil
-        ensime-startup-snapshot-notification nil
-        company-minimum-prefix-length 0))
 
 (use-package sbt-mode
   :pin melpa)
+(use-package scala-mode
+  :interpreter ("scala" . scala-mode)
+  :mode "\\.s\\(cala\\|bt\\)$")
 
-;; Java / Scala support for templates
-(defun mvn-package-for-buffer ()
-  "Calculate the expected package name for the buffer;
-assuming it is in a maven-style project."
-  ;; see https://github.com/fommil/dotfiles/issues/66
-  (let* ((kind (file-name-extension buffer-file-name))
-         (root (locate-dominating-file default-directory kind)))
-    (when root
-      (require 'subr-x) ;; maybe we should just use 's
-      (replace-regexp-in-string
-       (regexp-quote "/") "."
-       (string-remove-suffix "/"
-                             (string-remove-prefix
-                              (expand-file-name (concat root "/" kind "/"))
-                              default-directory))
-       nil 'literal))))
+;; Enable sbt mode for executing sbt commands
+(use-package sbt-mode
+  :commands sbt-start sbt-command
+  :config
+  ;; WORKAROUND: https://github.com/ensime/emacs-sbt-mode/issues/31
+  ;; allows using SPACE when in the minibuffer
+  (substitute-key-definition
+   'minibuffer-complete-word
+   'self-insert-command
+   minibuffer-local-completion-map)
+   ;; sbt-supershell kills sbt-mode:  https://github.com/hvesalai/emacs-sbt-mode/issues/152
+   (setq sbt:program-options '("-Dsbt.supershell=false"))
+)
