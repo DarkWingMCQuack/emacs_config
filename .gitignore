@@ -13,3 +13,4 @@ network-security.data
 .last-package-update-day
 projectile.cache
 .*
+session.*
