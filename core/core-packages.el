@@ -1,28 +1,37 @@
-(require 'package)
+(require 'package) ;; Emacs builtin
 
-(setq package-enable-at-startup nil)
+;; set package.el repositories
+(setq package-archives
+      '(
+        ("org" . "https://orgmode.org/elpa/")
+        ("gnu" . "https://elpa.gnu.org/packages/")
+        ("melpa" . "https://melpa.org/packages/")
+        ("marmalade" . "http://marmalade-repo.org/packages/")
+        ))
 
-(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
-(add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/"))
-
+;; initialize built-in package management
 (package-initialize)
 
-(unless (package-installed-p 'use-package)
-  (package-refresh-contents)
-  (package-install 'use-package))
+;; update packages list if we are on a new install
+(unless package-archive-contents
+  (package-refresh-contents))
+
+;; a list of pkgs to programmatically install
+;; ensure installed via package.el
+(setq my-package-list '(use-package
+                         exec-path-from-shell))
+
+;; programmatically install/ensure installed
+;; pkgs in your personal list
+(dolist (package my-package-list)
+  (unless (package-installed-p package)
+    (package-install package)))
+
 
 (setq use-package-always-ensure t)
 
-(unless (package-installed-p 'diminish)
-  (package-refresh-contents)
-  (package-install 'diminish))
-
-(unless (package-installed-p 'exec-path-from-shell)
-  (package-refresh-contents)
-  (package-install 'exec-path-from-shell))
-
-(eval-when-compile
-  (require 'use-package))
-(require 'diminish)
-(require 'bind-key)
+(use-package auto-package-update
+  :config
+  (setq auto-package-update-delete-old-versions t
+        auto-package-update-interval 4)
+  (auto-package-update-maybe))

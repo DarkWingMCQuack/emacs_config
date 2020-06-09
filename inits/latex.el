@@ -13,6 +13,10 @@
 
   (setq-default TeX-master nil))
 
+(use-package company-auctex
+  :after company
+  :init (company-auctex-init))
+
 (use-package reftex
   :commands turn-on-reftex
   :ensure t
