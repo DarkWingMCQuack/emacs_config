@@ -50,6 +50,7 @@
 
 ;;load the rest
 (load (local-file-name "inits/ui-config"))
+(load (local-file-name "inits/linum"))
 (load (local-file-name "inits/drag-stuff"))
 (load (local-file-name "inits/hideshow"))
 (load (local-file-name "inits/which-key"))
@@ -69,6 +70,7 @@
 (load (local-file-name "inits/git-gutter"))
 (load (local-file-name "inits/docker"))
 (load (local-file-name "inits/typescript"))
+(load (local-file-name "inits/ranger"))
 
 
 ;;custom.el bullshit
