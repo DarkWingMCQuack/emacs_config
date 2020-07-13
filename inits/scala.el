@@ -1,8 +1,9 @@
 
 (use-package sbt-mode
   :pin melpa)
+
 (use-package scala-mode
-  :interpreter ("scala" . scala-mode)
+  ;; :interpreter ("scala" . scala-mode)
   :mode "\\.s\\(cala\\|bt\\)$")
 
 ;; Enable sbt mode for executing sbt commands

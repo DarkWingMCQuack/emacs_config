@@ -50,6 +50,7 @@
 
 ;;load the rest
 (load (local-file-name "inits/ui-config"))
+(load (local-file-name "inits/indent-guide"))
 (load (local-file-name "inits/linum"))
 (load (local-file-name "inits/drag-stuff"))
 (load (local-file-name "inits/hideshow"))
@@ -63,6 +64,7 @@
 (load (local-file-name "inits/haskell"))
 (load (local-file-name "inits/config"))
 (load (local-file-name "inits/undotree"))
+(load (local-file-name "inits/neotree"))
 (load (local-file-name "inits/rainbow"))
 (load (local-file-name "inits/smartparens"))
 (load (local-file-name "inits/markdown"))
@@ -71,6 +73,7 @@
 (load (local-file-name "inits/docker"))
 (load (local-file-name "inits/typescript"))
 (load (local-file-name "inits/ranger"))
+(load (local-file-name "inits/dashboard"))
 
 
 ;;custom.el bullshit

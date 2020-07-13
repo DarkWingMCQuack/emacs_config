@@ -35,10 +35,6 @@
   (company-lsp-enable-snippet t)
   (company-lsp-enable-recompletion t))
 
-(use-package lsp-treemacs
-  :after treemacs lsp-mode
-  :commands lsp-treemacs-errors-list)
-
 (use-package lsp-ui
   :after lsp-mode
   :custom
@@ -65,7 +61,20 @@
   (lsp-ui-peek-fontify 'on-demand) ;; never, on-demand, or always
   :hook (lsp-mode . lsp-ui-mode))
 
+;; Add metals backend for lsp-mode
+;; for scala
+(use-package lsp-metals)
+
+(use-package posframe
+  ;; Posframe is a pop-up tool that must be manually installed for dap-mode
+  )
+
+
 (use-package dap-mode
+  :hook
+  (lsp-mode . dap-mode)
+  (lsp-mode . dap-ui-mode)
+
   :config
   (dap-mode 1)
   (require 'dap-hydra)
