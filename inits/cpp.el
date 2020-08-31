@@ -97,4 +97,3 @@
       (message "No Compilation Errors or Warnings!"))))
 
 (add-hook 'compilation-finish-functions 'bury-compile-buffer-if-successful)
-

@@ -5,7 +5,7 @@
   :after evil
   :config
   (evil-leader/set-key
-    "gs" 'magit-status
+    "gg" 'magit-status
     "gp" 'magit-push))
 
 (use-package magit-todos

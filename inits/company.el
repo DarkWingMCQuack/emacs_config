@@ -29,7 +29,6 @@
 
 
 
-
 ;; enable fuzzy matching
 (use-package company-flx
   :after company

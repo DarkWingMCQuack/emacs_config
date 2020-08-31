@@ -16,6 +16,9 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
+;; i dont know why, but this is needed
+(require 'tramp)
+
 (defvar local-dir user-emacs-directory
   "The root dir of the Emacs configuration.")
 

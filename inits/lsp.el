@@ -16,7 +16,9 @@
   (evil-leader/set-key
     ;;paddys extra ehrenfunktion die
     ;;IN KEINEN EINZIGEN FICK LSP BEI MIR FUNKTIONIERT
-    "gd"    'lsp-find-definition)
+    "gd"    'lsp-find-definition
+    "sd"    'lsp-ui-doc-glance
+    "im"    'lsp-ui-imenu)
 
   (setq lsp-clients-clangd-args
         '("-j=4"
