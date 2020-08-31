@@ -5,6 +5,14 @@
 (scroll-bar-mode -1)
 (menu-bar-mode -1)
 
+(defun my/disable-scroll-bars (frame)
+  (modify-frame-parameters frame
+                           '((vertical-scroll-bars . nil)
+                             (horizontal-scroll-bars . nil))))
+
+(add-hook 'after-make-frame-functions 'my/disable-scroll-bars)
+(add-hook 'window-setup-hook 'toggle-frame-fullscreen t)
+
 ;; nice scrolling
 (setq scroll-margin 0
       scroll-conservatively 100000
@@ -16,7 +24,7 @@
 (size-indication-mode t)
 
 ;; set font
-(set-frame-font "Source Code Pro" nil t)
+(setq default-frame-alist '((font . "Source Code Pro-10")))
 
 
 ;; stop prompting me, allright?
@@ -41,7 +49,7 @@
   (doom-themes-neotree-config))
 
 (use-package doom-modeline
-  :hook (after-init . doom-modeline-init)
+  :hook (after-init . doom-modeline-mode)
   :config
   (setq evil-normal-state-tag   (propertize "[Normal]" 'face '((:background "green" :foreground "black")))
         evil-emacs-state-tag    (propertize "[Emacs]" 'face '((:background "orange" :foreground "black")))
