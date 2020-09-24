@@ -4,6 +4,7 @@
   (setq evil-want-keybinding nil)
   (setq evil-shift-width 2)
   :config
+  (evil-define-key 'normal 'global "gl" 'goto-line)
   (evil-mode 1))
 
 (use-package evil-matchit
@@ -62,8 +63,6 @@
     "cc"    'evilnc-comment-or-uncomment-lines
 
     "t"     'my-open-term
-
-    "gl"    'goto-line
 
     ;;exit emacs
     "qq"    'save-buffers-kill-terminal
