@@ -8,6 +8,7 @@
 
 (my-leader
  "b" '(:ignore t :wk "buffers")
+ "p" '(:ignore t :wk "project")
  "f" '(:ignore t :wk "files")
  "g" '(:ignore t :wk "git")
  "w" '(:ignore t :wk "windows"))
