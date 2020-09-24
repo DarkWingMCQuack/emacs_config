@@ -4,6 +4,13 @@
   (lsp-trace nil)
   (lsp-print-performance nil)
   (lsp-auto-guess-root t)
+  (lsp-clients-clangd-args
+        '("-j=4"
+          "--background-index"
+          "-log=error"
+          "--completion-style=detailed"
+          "--header-insertion=never"
+          "--clang-tidy"))
   :hook
   (go-mode . lsp)
   (python-mode . lsp)
@@ -14,24 +21,16 @@
   :config
   ;; (require 'lsp-clients)
   (evil-leader/set-key
-    ;;paddys extra ehrenfunktion die
-    ;;IN KEINEN EINZIGEN FICK LSP BEI MIR FUNKTIONIERT
+	"TAB"     'lsp-format-buffer
     "gd"    'lsp-find-definition
-    "sd"    'lsp-ui-doc-glance
-    "im"    'lsp-ui-imenu)
-
-  (setq lsp-clients-clangd-args
-        '("-j=4"
-          "--background-index"
-          "-log=error"
-          "--completion-style=detailed"
-          "--header-insertion=never"
-          "--clang-tidy")))
+    "sd"    'lsp-ui
+    "im"    'lsp-ui-imenu-doc-glance))
 
 
 (use-package company-lsp
   :after company lsp-mode
   :custom
+  (lsp-completion-provider :capf)
   (company-lsp-cache-candidates t) ;; auto, t(always using a cache), or nil
   (company-lsp-async t)
   (company-lsp-enable-snippet t)

@@ -3,7 +3,9 @@
 
 ;; reduce the frequency of garbage collection by making it happen on
 ;; each 50MB of allocated data (the default is on every 0.76MB)
-(setq gc-cons-threshold 50000000)
+(setq gc-cons-threshold 300000000)
+
+(setq read-process-output-max (* 3 1024 1024)) ;; 3mb
 
 ;; ensure environment variables inside Emacs look the same as in the user's shell.
 (require 'exec-path-from-shell)

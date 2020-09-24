@@ -16,6 +16,9 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
+(unless package-archive-contents
+  (package-refresh-contents))
+
 ;; i dont know why, but this is needed
 (require 'tramp)
 
@@ -34,7 +37,6 @@
 
 (setq load-prefer-newer t)
 
-(package-refresh-contents)
 
 ;;load core
 (load (local-file-name "core/core-packages"))
@@ -49,7 +51,6 @@
 (load (local-file-name "inits/cpp"))
 (load (local-file-name "inits/go"))
 (load (local-file-name "inits/rust"))
-(load (local-file-name "inits/clang-format"))
 (load (local-file-name "inits/my-return"))
 (load (local-file-name "inits/cmake"))
 

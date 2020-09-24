@@ -9,9 +9,6 @@
         ("marmalade" . "http://marmalade-repo.org/packages/")
         ))
 
-;; initialize built-in package management
-(package-initialize)
-
 ;; update packages list if we are on a new install
 (unless package-archive-contents
   (package-refresh-contents))
