@@ -6,12 +6,6 @@
   :config
   (evil-mode 1))
 
-(use-package linum-relative
-  :after evil
-  :hook
-  ((evil-insert-state-entry-hook . linum-relative-toggle)
-   (evil-insert-state-exit-hook . linum-relative-toggle)))
-
 (use-package evil-matchit
   :after evil
   :init
@@ -43,6 +37,12 @@
     (split-window-below -15)
     (other-window -1)
     (term "/bin/bash"))
+  (defun er-switch-to-previous-buffer ()
+	"Switch to previously open buffer.
+     Repeated invocations toggle between the two most recently open buffers."
+	(interactive)
+	(switch-to-buffer (other-buffer (current-buffer) 1)))
+
 
   (evil-leader/set-leader "<SPC>")
   (evil-leader/set-key
@@ -57,7 +57,6 @@
     ;;files
     "fs"    'save-buffer
     "ff"    'helm-find-files
-    "fd"    'dired
 
     ;;shit
     "cc"    'evilnc-comment-or-uncomment-lines
@@ -71,5 +70,6 @@
 
     ;; buffers
     "bx"    'eval-buffer
+    "bb"    'er-switch-to-previous-buffer
     "bf"    'switch-to-buffer
     "bd"    'kill-this-buffer))
