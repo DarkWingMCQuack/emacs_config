@@ -22,6 +22,7 @@
 ;; i dont know why, but this is needed
 (require 'tramp)
 
+;;start emacs as a server such that we can use emacsclient
 (server-start)
 
 (defvar local-dir user-emacs-directory
