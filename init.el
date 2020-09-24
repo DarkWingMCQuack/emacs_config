@@ -43,17 +43,19 @@
 (load (local-file-name "core/core-packages"))
 (load (local-file-name "core/core-env"))
 
+(load (local-file-name "inits/general"))
+
 (load (local-file-name "inits/auto-package-updater"))
 (load (local-file-name "inits/evil"))
 (load (local-file-name "inits/prettify-symbols"))
 (load (local-file-name "inits/helm"))
 (load (local-file-name "inits/lsp"))
 (load (local-file-name "inits/cquery"))
-(load (local-file-name "inits/cpp"))
 (load (local-file-name "inits/go"))
 (load (local-file-name "inits/rust"))
 (load (local-file-name "inits/my-return"))
 (load (local-file-name "inits/cmake"))
+(load (local-file-name "inits/crux"))
 
 ;;load the rest
 (load (local-file-name "inits/ui-config"))
@@ -81,6 +83,8 @@
 (load (local-file-name "inits/typescript"))
 (load (local-file-name "inits/ranger"))
 (load (local-file-name "inits/dashboard"))
+
+(load (local-file-name "inits/keybindings"))
 
 
 ;;custom.el bullshit

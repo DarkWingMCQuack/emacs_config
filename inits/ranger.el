@@ -3,5 +3,6 @@
   :config
   (setq ranger-cleanup-eagerly t)
 
-  (evil-leader/set-key
-    "rr"    'ranger))
+  :general
+  (my-leader
+   "r r" '(ranger :wk "ranger")))

@@ -3,10 +3,13 @@
 
 (use-package evil-magit
   :after evil
-  :config
-  (evil-leader/set-key
-    "gg" 'magit-status
-    "gp" 'magit-push))
+  :init
+  (evil-magit-init)
+  :general
+  (my-leader
+   "g g" '(magit-status :wk "magit status")
+   "g t" '(magit-todos-list :wk "show todos")
+   "g p" '(magit-push :wk "push")))
 
 (use-package magit-todos
   :after magit

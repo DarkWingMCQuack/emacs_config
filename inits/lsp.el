@@ -5,26 +5,30 @@
   (lsp-print-performance nil)
   (lsp-auto-guess-root t)
   (lsp-clients-clangd-args
-        '("-j=4"
-          "--background-index"
-          "-log=error"
-          "--completion-style=detailed"
-          "--header-insertion=never"
-          "--clang-tidy"))
+		'("-j=4"
+		  "--background-index"
+		  "-log=error"
+		  "--completion-style=detailed"
+		  "--header-insertion=never"
+		  "--clang-tidy"))
   :hook
   (go-mode . lsp)
   (python-mode . lsp)
   (c++-mode . lsp)
   (c-mode . lsp)
+  (rust-mode . lsp)
   (scala-mode . lsp)
   (lsp-mode . lsp-lens-mode)
-  :config
-  ;; (require 'lsp-clients)
-  (evil-leader/set-key
-	"TAB"     'lsp-format-buffer
-    "gd"    'lsp-find-definition
-    "sd"    'lsp-ui
-    "im"    'lsp-ui-imenu-doc-glance))
+
+  :general
+  (my-leader 'lsp-mode-map
+			 "TAB" '(lsp-format-buffer :wk "format buffer")
+			 "s d" '(lsp-ui :wk "show documentation"))
+
+  (general-define-key
+   :keymaps 'lsp-mode-map
+					  :states 'normal
+					  "g d" 'lsp-find-definition))
 
 
 (use-package company-lsp
@@ -70,19 +74,16 @@
   ;; Posframe is a pop-up tool that must be manually installed for dap-mode
   )
 
-
 (use-package dap-mode
   :hook
   (lsp-mode . dap-mode)
   (lsp-mode . dap-ui-mode)
 
   :config
-  (dap-mode 1)
-  (require 'dap-hydra)
   (require 'dap-gdb-lldb)   ; download and expand lldb-vscode to the =~/.extensions/webfreak.debug=
   (require 'dap-go)     ; download and expand vscode-go-extenstion to the =~/.extensions/go=
   (require 'dap-python)
   (use-package dap-ui
-    :ensure nil
-    :config
-    (dap-ui-mode 1)))
+	:ensure nil
+	:config
+	(dap-ui-mode 1)))

@@ -5,5 +5,6 @@
    '(undo-tree-history-directory-alist
 	 (quote (("." . "~/.emacs.d/undo/")))))
 
-  (evil-leader/set-key
-	"u" 'undo-tree-visualize))
+  :general
+  (my-leader
+   "u" '(undo-tree-visualize :wk "switch project")))
