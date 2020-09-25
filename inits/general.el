@@ -24,7 +24,8 @@
   (general-override-mode)
   (general-evil-setup)
   (general-auto-unbind-keys)
+
   (general-create-definer my-leader
-	:states 'motion
+	:states '(motion normal emacs visual)
 	:prefix my-leader-key
 	:non-normal-prefix my-leader-secondary-key))
