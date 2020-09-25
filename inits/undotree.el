@@ -7,4 +7,10 @@
 
   :general
   (my-leader
-   "u" '(undo-tree-visualize :wk "switch project")))
+	"u" '(undo-tree-visualize :wk "switch project"))
+
+  (general-define-key
+   :states 'normal
+
+   "u" '(undo-tree-undo :wk "undo")
+   "U" '(undo-tree-redo :wk "redo")))
