@@ -9,6 +9,8 @@
 
 (use-package evil-matchit
   :after evil
+  :custom
+  (evilmi-shortcut "s")
   :init
   (global-evil-matchit-mode 1))
 
@@ -19,13 +21,5 @@
 			"c c" 'evilnc-comment-or-uncomment-lines))
 
 (use-package evil-surround
-  :ensure t
   :init
   (global-evil-surround-mode))
-
-;; (use-package evil-collection
-;;   :after evil
-;;   :custom
-;;   (evil-collection-setup-minibuffer t)
-;;   (evil-collection-company-use-tng nil)
-;;   :init (evil-collection-init))
