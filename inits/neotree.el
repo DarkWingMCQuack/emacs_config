@@ -3,25 +3,25 @@
   :bind
   ([f8] . neotree-toggle)
 
-  :config
-  (setq projectile-switch-project-action
-		'neotree-projectile-action)
+  :custom
+  (neo-theme
+   (if (display-graphic-p)
+       'icons
+     'arrow))
 
-  (setq neo-theme
-        (if (display-graphic-p)
-            'icons
-          'arrow))
+  :general
+  (general-define-key
+   :keymaps 'neotree-mode-map
+   :states 'normal
 
-  (evil-set-initial-state 'neotree-mode 'normal)
-  (evil-define-key 'normal neotree-mode-map
-    (kbd "RET") 'neotree-enter
-    (kbd "c")   'neotree-create-node
-    (kbd "r")   'neotree-rename-node
-    (kbd "d")   'neotree-delete-node
-    (kbd "g")   'neotree-refresh
-    (kbd "C")   'neotree-change-root
-    (kbd "H")   'neotree-hidden-file-toggle
-    (kbd "q")   'neotree-hide))
+   "RET" '(neotree-enter :wk "enter")
+   "c" '(neotree-create-node :wk "create node")
+   "U" '(neotree-select-up-node :wk "go up a directory")
+   "c" '(neotree-rename-node :wk "rename node")
+   "d" '(neotree-delete-node :wk "delete node")
+   "C" '(neotree-change-root :wk "change root")
+   "H" '(neotree-hidden-file-toggle :wk "hidden files toggle")
+   "q" '(neotree-hide :wk "hide neotree")))
 
 
 (use-package all-the-icons
