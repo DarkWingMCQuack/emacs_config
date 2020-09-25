@@ -45,7 +45,7 @@
   :custom
   (lsp-ui-doc-enable nil)
   (lsp-ui-doc-header t)
-  (lsp-ui-doc-include-signature nil)
+  (lsp-ui-doc-include-signature t)
   (lsp-ui-doc-position 'at-point) ;; top, bottom, or at-point
   (lsp-ui-doc-max-width 120)
   (lsp-ui-doc-max-height 30)
