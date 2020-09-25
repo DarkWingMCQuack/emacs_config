@@ -1,7 +1,7 @@
 ;; If you are about to read this bullshit there
 ;; is a high propability you will get eye-cancer
 (require 'smartparens (concat user-emacs-directory
-        (convert-standard-filename "inits/smartparens.el")))
+							  (convert-standard-filename "inits/smartparens.el")))
 
 (defun my-doxygen-return ()
   "Advanced for Javadoc multiline comments.
