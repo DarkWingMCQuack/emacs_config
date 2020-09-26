@@ -32,8 +32,6 @@
 		 (regexp (concat "[[:space:]]*" comment-start "*.*$")))
 	(string-match regexp line)))
 
-;; TODO: create a more sophisticated method for finding this out
-;; since this fails if any string contains /*
 (defun is-inside-multiline-comment ()
   "check if the cursor is currently in a multiline comment"
   (interactive)
@@ -51,7 +49,10 @@
 			(search-backward "/*" nil t))))
 	(progn
 	  (goto-char last)
-	  result)))
+	  ;; (nth 4 (syntax-ppss)) checks if the cursor is currently in a comment
+	  ;; this avoids the problem of having "/*" as a string but not being in a comment
+	  (and (nth 4 (syntax-ppss))
+		   result))))
 
 (defun my-super-return ()
   "My super return check for programming languages.
