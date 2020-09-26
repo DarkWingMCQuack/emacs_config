@@ -41,23 +41,17 @@
   (let* ((last (point))
          (line-beginning 
 		  (progn (beginning-of-line) 
-				 (point))))
-
-    (progn
-	  ;; maybe we need this
-      ;; (goto-char last)
-	  (let ((result 
-			 (if (search-backward "*/" nil t)
-				 ;; there are some comment endings - search forward
-				 (search-forward "/*" last t)
-			   ;; it's the only comment - search backward
-			   (goto-char last)
-			   (search-backward "/*" nil t)))
-			) (progn
+				 (point)))
+		 (result 
+		  (if (search-backward "*/" nil t)
+			  ;; there are some comment endings - search forward
+			  (search-forward "/*" last t)
+			;; it's the only comment - search backward
 			(goto-char last)
-			result
-			))
-      )))
+			(search-backward "/*" nil t))))
+	(progn
+	  (goto-char last)
+	  result)))
 
 (defun my-super-return ()
   "My super return check for programming languages.
