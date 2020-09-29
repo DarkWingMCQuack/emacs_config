@@ -19,3 +19,7 @@
    "m" '(dired-mark :wk "mark")
    "u" '(dired-unmark :wk "unmark/undelete")
    "x" '(dired-do-flagged-delete :wk "delete")))
+
+(use-package all-the-icons-dired
+  :hook
+  (dired-mode-hook . all-the-icons-dired-mode))
