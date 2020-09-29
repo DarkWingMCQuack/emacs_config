@@ -52,4 +52,5 @@
 
   "f s" '(save-buffer :wk "save current buffer")
   "f r" '(crux-rename-file-and-buffer :wk "rename file")
+  "f d" '(dired :wk "dired")
   "f f" '(helm-find-files :wk "find file"))
