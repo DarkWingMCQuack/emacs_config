@@ -2,7 +2,7 @@
 
 (use-package haskell-mode
   :mode (("\\.hs\\(c\\|-boot\\)?\\'" . haskell-mode)
-         ("\\.lhs\\'" . literate-haskell-mode)
+         ("\\.lhs\\'" . haskell-literate-mode)
          ("\\.cabal\\'" . haskell-cabal-mode))
   :preface
   (defvar haskell-prettify-symbols-alist
