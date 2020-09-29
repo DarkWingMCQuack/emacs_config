@@ -5,5 +5,6 @@
 
   :general
   (my-leader 
+	:states 'normal
 	"j" '(avy-goto-line :wk "avy line jump")
-	"a" '(avy-goto-char-timer :wk "goto char")))
+	"a" '(avy-goto-char-timer :wk "avy goto char")))

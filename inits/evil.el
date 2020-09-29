@@ -10,7 +10,7 @@
 (use-package evil-matchit
   :after evil
   :custom
-  (evilmi-shortcut "s")
+  (evilmi-shortcut "m")
   :init
   (global-evil-matchit-mode 1))
 
