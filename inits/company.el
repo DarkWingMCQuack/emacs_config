@@ -33,10 +33,10 @@
 
 
 ;; enable fuzzy matching
-(use-package company-flx
-  :after company
-  :config
-  (company-flx-mode +1))
+;; (use-package company-flx
+;;   :after company
+;;   :config
+;;   (company-flx-mode +1))
 
 (use-package company-posframe
   :config
