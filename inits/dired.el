@@ -10,7 +10,7 @@
 
   (general-define-key
    :keymaps 'dired-mode-map
-   :states 'normal
+   :states '(normal motion)
    "RET" '(dired-find-alternate-file :wk "open file")
    "f" '(dired-find-alternate-file :wk "open file")
    "+" '(dired-create-empty-file :wk "create new file")

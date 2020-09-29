@@ -50,6 +50,7 @@
 (load (local-file-name "inits/hideshow"))
 (load (local-file-name "inits/which-key"))
 (load (local-file-name "inits/flycheck"))
+(load (local-file-name "inits/flyspell"))
 (load (local-file-name "inits/yasnippet"))
 (load (local-file-name "inits/company"))
 (load (local-file-name "inits/projectile"))
