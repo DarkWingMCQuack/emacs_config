@@ -30,12 +30,14 @@
   (general-define-key
    :keymaps 'company-active-map
 
-   "<tab>"       '(company-select-next
+   "<tab>"     '(company-select-next
 				 :wk "cycle completion candidates")
 
    "<backtab>" '(company-select-previous
 				 :wk "cycle completion candidates backwards")))
 
+(use-package company-box
+  :hook (company-mode . company-box-mode))
 
 ;; enable fuzzy matching
 (use-package company-flx
@@ -43,6 +45,6 @@
   :config
   (company-flx-mode 1))
 
-(use-package company-posframe
-  :config
-  (company-posframe-mode 1))
+(use-package company-statistics
+  :hook
+  (after-init-hook . company-statistics-mode))
