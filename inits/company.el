@@ -1,13 +1,16 @@
 (use-package company
   :init
   (global-company-mode)
-  (setq company-idle-delay 0
-        company-minimum-prefix-length 1
-        company-echo-delay 0
-        company-auto-commit nil
-        company-tooltip-limit 15
-        company-selection-wrap-around t
-        company-require-match 'never)
+
+  :custom
+  (company-idle-delay 0)
+  (company-minimum-prefix-length 1)
+  (company-echo-delay 0)
+  (company-auto-commit nil)
+  (company-show-numbers t)
+  (company-tooltip-limit 15)
+  (company-selection-wrap-around t)
+  (company-require-match 'never)
 
   :config
   (delete 'company-dabbrev company-backends)
@@ -25,18 +28,20 @@
 
   :general
   (general-define-key
-   :states 'normal
    :keymaps 'company-active-map
-   "TAB" '(company-select-next :wk "cycle completion candidates")
+
+   "<tab>"       '(company-select-next
+				 :wk "cycle completion candidates")
+
    "<backtab>" '(company-select-previous
-				 :wk "cycle completion candidates backwars")))
+				 :wk "cycle completion candidates backwards")))
 
 
 ;; enable fuzzy matching
-;; (use-package company-flx
-;;   :after company
-;;   :config
-;;   (company-flx-mode +1))
+(use-package company-flx
+  :after company
+  :config
+  (company-flx-mode 1))
 
 (use-package company-posframe
   :config

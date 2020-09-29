@@ -25,5 +25,6 @@
   :custom
   (evil-collection-key-blacklist '("SPC"))
   (evil-collection-setup-minibuffer t)
+  (evil-collection-company-use-tng nil)
   :config
   (evil-collection-init))
