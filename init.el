@@ -32,6 +32,7 @@
 
 (load (local-file-name "inits/auto-package-updater"))
 (load (local-file-name "inits/evil"))
+(load (local-file-name "inits/avy"))
 (load (local-file-name "inits/prettify-symbols"))
 (load (local-file-name "inits/helm"))
 (load (local-file-name "inits/lsp"))
