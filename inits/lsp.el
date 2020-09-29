@@ -1,16 +1,17 @@
 (use-package lsp-mode
   :custom
+  (lsp-enable-snippet t)
   (lsp-print-io nil)
   (lsp-trace nil)
   (lsp-print-performance nil)
   (lsp-auto-guess-root t)
   (lsp-clients-clangd-args
-		'("-j=4"
-		  "--background-index"
-		  "-log=error"
-		  "--completion-style=detailed"
-		  "--header-insertion=never"
-		  "--clang-tidy"))
+   '("-j=4"
+	 "--background-index"
+	 "-log=error"
+	 "--completion-style=detailed"
+	 "--header-insertion=never"
+	 "--clang-tidy"))
   :hook
   (go-mode . lsp)
   (python-mode . lsp)
@@ -22,13 +23,13 @@
 
   :general
   (my-leader 'lsp-mode-map
-			 "TAB" '(lsp-format-buffer :wk "format buffer")
-			 "s d" '(lsp-ui :wk "show documentation"))
+	"TAB" '(lsp-format-buffer :wk "format buffer")
+	"s d" '(lsp-ui :wk "show documentation"))
 
   (general-define-key
    :keymaps 'lsp-mode-map
-					  :states 'normal
-					  "g d" 'lsp-find-definition))
+   :states 'normal
+   "g d" 'lsp-find-definition))
 
 
 (use-package company-lsp
