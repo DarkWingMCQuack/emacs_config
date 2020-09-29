@@ -43,7 +43,7 @@
       uniquify-ignore-buffers-re "^\\*") ;; don't muck with special buffers
 
 ;; activate it for all buffers
-(setq-default save-place t)
+(save-place-mode 1) 
 (require 'saveplace)
 
 ;; saveplace remembers your location in a file when saving files
