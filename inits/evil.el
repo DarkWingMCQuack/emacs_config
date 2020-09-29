@@ -20,6 +20,9 @@
 			:states 'normal
 			"c c" 'evilnc-comment-or-uncomment-lines))
 
-(use-package evil-surround
-  :init
-  (global-evil-surround-mode))
+(use-package evil-collection
+  :after evil
+  :custom
+  (evil-collection-key-blacklist '("SPC"))
+  :config
+  (evil-collection-init))
