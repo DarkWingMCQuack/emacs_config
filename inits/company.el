@@ -4,7 +4,7 @@
   (setq company-idle-delay 0
         company-minimum-prefix-length 1
         company-echo-delay 0
-        company-auto-complete nil
+        company-auto-commit nil
         company-tooltip-limit 15
         company-selection-wrap-around t
         company-require-match 'never)
@@ -21,12 +21,15 @@
   (delete 'company-clang company-backends)
   (delete 'company-bbdb company-backends)
   (delete 'company-css company-backends)
-  (delete 'company-semantic company-backends))
+  (delete 'company-semantic company-backends)
 
-
-(define-key company-active-map [tab] 'company-select-next)
-(define-key company-active-map [backtab] 'company-select-previous)
-
+  :general
+  (general-define-key
+   :states 'normal
+   :keymaps 'company-active-map
+   "TAB" '(company-select-next :wk "cycle completion candidates")
+   "<backtab>" '(company-select-previous
+				 :wk "cycle completion candidates backwars")))
 
 
 ;; enable fuzzy matching
