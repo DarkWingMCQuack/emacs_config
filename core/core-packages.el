@@ -9,14 +9,17 @@
         ("marmalade" . "http://marmalade-repo.org/packages/")
         ))
 
-;; update packages list if we are on a new install
-(unless package-archive-contents
-  (package-refresh-contents))
+(package-initialize)
 
+(unless (package-installed-p 'use-package)
+  ;; only fetch the archives if you don't have use-package installed
+  (package-refresh-contents)
+  (package-install 'use-package))
+;; update packages list if we are on a new install
 ;; a list of pkgs to programmatically install
 ;; ensure installed via package.el
 (setq my-package-list '(use-package
-                         exec-path-from-shell))
+                           exec-path-from-shell))
 
 ;; programmatically install/ensure installed
 ;; pkgs in your personal list
