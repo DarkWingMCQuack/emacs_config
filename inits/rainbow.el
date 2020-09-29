@@ -1,3 +1,3 @@
 (use-package rainbow-delimiters
   :hook
-  (prog-mode-hook . rainbow-delimiters-mode))
+  (prog-mode . rainbow-delimiters-mode))

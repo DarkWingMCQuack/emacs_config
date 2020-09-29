@@ -21,7 +21,7 @@
 
 (use-package magit-todos
   :after magit
-  :hook (magit-mode-hook . magit-todos-mode))
+  :hook (magit-mode . magit-todos-mode))
 
 (use-package gitignore-mode
   :mode ("/\\.gitignore\\'"))

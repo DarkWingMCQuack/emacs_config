@@ -3,8 +3,8 @@
   :custom
   (dired-recursive-deletes 'always)
   (dired-recursive-copies  'always)
-  :general
 
+  :general
   (my-leader 'dired-mode-map
 	"+" '(dired-create-directory :wk "new directory"))
 
@@ -22,4 +22,4 @@
 
 (use-package all-the-icons-dired
   :hook
-  (dired-mode-hook . all-the-icons-dired-mode))
+  (dired-mode . all-the-icons-dired-mode))

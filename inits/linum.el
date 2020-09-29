@@ -1,4 +1,5 @@
 (use-package nlinum-relative
+  :hook 
+  (prog-mode . nlinum-relative-mode)
   :config
-  (add-hook 'prog-mode-hook 'nlinum-relative-mode)
   (nlinum-relative-setup-evil))

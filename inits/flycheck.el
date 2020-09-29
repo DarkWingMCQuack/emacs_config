@@ -4,8 +4,8 @@
 
 (use-package flyspell
   :hook
-  (prog-mode-hook . flyspell-prog-mode)
-  (text-mode-hook . flyspell-mode)
+  (prog-mode . flyspell-prog-mode)
+  (text-mode . flyspell-mode)
 
   :general
 
