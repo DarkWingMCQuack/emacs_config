@@ -8,6 +8,7 @@
   (text-mode-hook . flyspell-mode)
 
   :general
+
   (general-define-key
    :keymaps 'flyspell-mode-map
    :states 'normal
