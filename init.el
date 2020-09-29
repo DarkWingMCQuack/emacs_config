@@ -10,11 +10,6 @@
 
 ;;; Code:
 
-;; i dont know why, but this is needed
-(require 'tramp)
-
-;;start emacs as a server such that we can use emacsclient
-(server-start)
 
 (defvar local-dir user-emacs-directory
   "The root dir of the Emacs configuration.")
@@ -27,10 +22,9 @@
       (make-directory parent-dir))
     file-path))
 
-(setq load-prefer-newer t)
-
 
 ;;load core
+(load (local-file-name "core/core-server"))
 (load (local-file-name "core/core-packages"))
 (load (local-file-name "core/core-env"))
 

@@ -19,7 +19,7 @@
 ;; a list of pkgs to programmatically install
 ;; ensure installed via package.el
 (setq my-package-list '(use-package
-                           exec-path-from-shell))
+                         exec-path-from-shell))
 
 ;; programmatically install/ensure installed
 ;; pkgs in your personal list
@@ -30,9 +30,5 @@
 
 (setq use-package-always-ensure t)
 
-(use-package auto-package-update
-  :custom
-  (auto-package-update-delete-old-versions t)
-  (auto-package-update-interval 4)
-  :config
-  (auto-package-update-maybe))
+(setq load-prefer-newer t)
+
