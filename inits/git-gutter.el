@@ -1,5 +1,6 @@
 (use-package git-gutter-fringe
   :diminish git-gutter-mode
+  :custom
+  (git-gutter-fr:side 'right-fringe)
   :config
-  (setq git-gutter-fr:side 'right-fringe)
   (global-git-gutter-mode))
