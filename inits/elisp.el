@@ -1,4 +1,3 @@
-
 ;; elisp.el
 
 (defun recompile-elc-on-save ()
