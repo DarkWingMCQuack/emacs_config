@@ -1,8 +1,6 @@
 
 ;; elisp.el
 
-(define-key lisp-mode-shared-map (kbd "RET") 'reindent-then-newline-and-indent)
-
 (defun recompile-elc-on-save ()
   (add-hook 'after-save-hook
             (lambda ()
