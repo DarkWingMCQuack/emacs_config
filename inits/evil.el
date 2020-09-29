@@ -24,5 +24,6 @@
   :after evil
   :custom
   (evil-collection-key-blacklist '("SPC"))
+  (evil-collection-setup-minibuffer t)
   :config
   (evil-collection-init))

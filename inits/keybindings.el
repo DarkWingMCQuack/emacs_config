@@ -27,6 +27,7 @@
 
 
 (my-leader
+  :keymaps 'override
   "SPC" '(helm-M-x :wk "execute command")
 
   "t" '(my-open-term :wk "open terminal")
