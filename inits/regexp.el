@@ -1,5 +1,8 @@
 (use-package visual-regexp
-  :commands (vr/replace vr/query-replace))
+  :commands (vr/replace vr/query-replace)
+  :general
+  (my-leader
+	"r r" '(vr/replace :wk "regexp replace")))
 
 (use-package visual-regexp-steroids
   :after visual-regexp)
