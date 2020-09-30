@@ -14,3 +14,4 @@ network-security.data
 projectile.cache
 .*
 session.*
+company-statistics-cache.el
