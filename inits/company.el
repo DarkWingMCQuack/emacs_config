@@ -47,4 +47,4 @@
 
 (use-package company-statistics
   :hook
-  (after-init-hook . company-statistics-mode))
+  (company-mode . company-statistics-mode))

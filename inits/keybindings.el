@@ -11,6 +11,7 @@
   "p" '(:ignore t :wk "project")
   "f" '(:ignore t :wk "files")
   "g" '(:ignore t :wk "git")
+  "o" '(:ignore t :wk "org")
   "w" '(:ignore t :wk "windows"))
 
 

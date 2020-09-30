@@ -43,6 +43,7 @@
 (load (local-file-name "inits/rust"))
 (load (local-file-name "inits/my-return"))
 (load (local-file-name "inits/cmake"))
+(load (local-file-name "inits/cpp"))
 (load (local-file-name "inits/crux"))
 
 ;;load the rest
