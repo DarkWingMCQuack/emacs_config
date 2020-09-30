@@ -71,7 +71,6 @@
 (load (local-file-name "inits/git-gutter"))
 (load (local-file-name "inits/docker"))
 (load (local-file-name "inits/typescript"))
-(load (local-file-name "inits/ranger"))
 (load (local-file-name "inits/dashboard"))
 
 (load (local-file-name "inits/keybindings"))
