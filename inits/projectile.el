@@ -3,7 +3,6 @@
   :custom
   (projectile-completion-system 'helm)
   (projectile-create-missing-test-files t)
-  ;; (projectile-switch-project-action #'projectile-commander)
   (projectile-switch-project-action 'projectile-find-file)
 
   :config
