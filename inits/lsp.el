@@ -23,6 +23,7 @@
 
   :general
   (my-leader 'lsp-mode-map
+	:states 'normal
 	"TAB" '(lsp-format-buffer :wk "format buffer")
 	"s d" '(lsp-ui :wk "show documentation"))
 
