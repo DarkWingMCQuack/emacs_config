@@ -1,8 +1,12 @@
 (use-package flycheck
-  :init
+  :custom
+  (flycheck-display-errors-delay 0)
+  :config
   (global-flycheck-mode))
 
 
 
 (use-package flycheck-popup-tip
-  :hook (global-flycheck-mode . flycheck-popup-tip-mode))
+  :after flycheck
+  :config
+  (add-hook 'flycheck-mode-hook 'flycheck-popup-tip-mode))

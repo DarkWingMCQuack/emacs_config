@@ -72,6 +72,7 @@
 (load (local-file-name "inits/docker"))
 (load (local-file-name "inits/typescript"))
 (load (local-file-name "inits/dashboard"))
+(load (local-file-name "inits/org"))
 
 (load (local-file-name "inits/keybindings"))
 

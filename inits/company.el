@@ -37,7 +37,9 @@
 				 :wk "cycle completion candidates backwards")))
 
 (use-package company-box
-  :hook (company-mode . company-box-mode))
+  :after company
+  :hook
+  (company-mode . company-box-mode))
 
 ;; enable fuzzy matching
 (use-package company-flx
@@ -46,5 +48,6 @@
   (company-flx-mode 1))
 
 (use-package company-statistics
+  :after company
   :hook
   (company-mode . company-statistics-mode))
