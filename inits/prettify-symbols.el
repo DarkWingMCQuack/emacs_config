@@ -30,7 +30,7 @@
    (1+ word)))
 
 (defun pretty-for-add ()
-  (setq font-lock-keywords nil)
+  ;; (setq font-lock-keywords nil)
   (font-lock-add-keywords
    nil
    `((,pretty-for-rgx 0 (prog1 nil
