@@ -31,6 +31,7 @@
 (load (local-file-name "inits/general"))
 
 (load (local-file-name "inits/auto-package-updater"))
+(load (local-file-name "inits/dired"))
 (load (local-file-name "inits/regexp"))
 (load (local-file-name "inits/evil"))
 (load (local-file-name "inits/snipe"))
