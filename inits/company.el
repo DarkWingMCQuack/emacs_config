@@ -3,7 +3,7 @@
   (global-company-mode)
 
   :custom
-  (company-idle-delay 0)
+  (company-idle-delay 0.1)
   (company-minimum-prefix-length 1)
   (company-echo-delay 0)
   (company-auto-commit nil)
