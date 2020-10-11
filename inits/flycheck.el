@@ -1,6 +1,6 @@
 (use-package flycheck
   :custom
-  (flycheck-display-errors-delay 0)
+  (flycheck-display-errors-delay 0.3)
   :config
   (global-flycheck-mode))
 
