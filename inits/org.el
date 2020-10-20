@@ -28,6 +28,7 @@
    :keymaps 'org-mode-map
    :states 'normal
    "K" '(org-shiftup :wk "org next priority")
+   "TAB" '(org-cycle :wk "org next priority")
    "J" '(org-shiftdown :wk "org previous priority")
    "L" '(org-shiftright :wk "org next status")
    "H" '(org-shiftright :wk "org previous status"))
