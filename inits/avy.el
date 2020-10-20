@@ -7,7 +7,7 @@
 
   (general-define-key
    :states 'normal
-   "q" 'avy-goto-char-timer)
+   "TAB" 'avy-goto-char-timer)
 
   (my-leader 
 	:states 'normal
