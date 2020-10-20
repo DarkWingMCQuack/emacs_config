@@ -1,7 +1,8 @@
 (use-package flyspell
-  :hook
+  ;; :hook
+  ;; dont enable flyspell 
   ;; (prog-mode . flyspell-prog-mode)
-  (text-mode . flyspell-mode)
+  ;; (text-mode . flyspell-mode)
 
   :config
   (defun fd-switch-dictionary()
