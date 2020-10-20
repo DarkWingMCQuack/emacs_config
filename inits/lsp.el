@@ -30,7 +30,8 @@
   (general-define-key
    :keymaps 'lsp-mode-map
    :states 'normal
-   "g d" 'lsp-find-definition))
+   "c w" '(lsp-execute-code-action :wk "code action")
+   "g d" '(lsp-find-definition :wk "goto definition")))
 
 
 (use-package company-lsp
