@@ -35,6 +35,7 @@
 
   (my-leader 'org-mode-map
 	"m t" '(org-todo :wk "cycle task status")
+	"c c" '(org-toggle-checkbox :wk "toggle checkbox")
 	"m d s" '(org-schedule :wk "org-schedule")
 	))
 
