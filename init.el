@@ -34,7 +34,6 @@
 (load (local-file-name "inits/dired"))
 (load (local-file-name "inits/regexp"))
 (load (local-file-name "inits/evil"))
-(load (local-file-name "inits/tabs"))
 (load (local-file-name "inits/snipe"))
 (load (local-file-name "inits/avy"))
 (load (local-file-name "inits/prettify-symbols"))
