@@ -1,12 +1,16 @@
 (use-package flycheck
   :custom
-  (flycheck-display-errors-delay 0.3)
+  (flycheck-display-errors-delay 0.5)
+  (flycheck-check-syntax-automatically '(mode-enabled save))
   :config
-  (global-flycheck-mode))
+  (global-flycheck-mode)
+  :general
+  (my-leader 'flycheck-mode-map
+	:states 'normal
+	"s e" '(flycheck-list-errors :wk "list errors")))
 
 
-
-(use-package flycheck-popup-tip
+(use-package flycheck-pos-tip
   :after flycheck
   :config
-  (add-hook 'flycheck-mode-hook 'flycheck-popup-tip-mode))
+  (add-hook 'flycheck-mode-hook 'flycheck-pos-tip-mode))
