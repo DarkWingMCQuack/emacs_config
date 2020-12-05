@@ -16,7 +16,6 @@
   (setq-default TeX-master nil))
 
 (use-package company-auctex
-  :after company
   :config (company-auctex-init))
 
 (use-package reftex
@@ -24,6 +23,7 @@
   :after auctex
   :custom
   (reftex-plug-into-AUCTeX t))
+
 
 (use-package bibtex
   :mode ("\\.bib" . bibtex-mode)
