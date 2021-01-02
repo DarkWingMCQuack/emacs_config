@@ -1,13 +1,27 @@
 (use-package magit
   :commands magit-status
   :general
-
   (general-define-key
    :keymaps 'magit-mode-map
    :states 'normal
    "q" (lambda()
 		 (interactive)
-		 (magit-mode-bury-buffer t))))
+		 (magit-mode-bury-buffer t)))
+
+  (general-define-key
+   :keymaps 'transient-map
+   "q" 'transient-quit-one
+   "<escape>" 'transient-quit-one)
+
+  (general-define-key
+   :keymaps 'transient-edit-map
+   "q" 'transient-quit-one
+   "<escape>" 'transient-quit-one)
+
+  (general-define-key
+   :keymaps 'transient-sticky-map
+   "q" 'transient-quit-seq
+   "<escape>" 'transient-quit-seq))
 
 (use-package evil-magit
   :after evil
