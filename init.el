@@ -36,6 +36,7 @@
 (load (local-file-name "inits/evil"))
 (load (local-file-name "inits/snipe"))
 (load (local-file-name "inits/avy"))
+(load (local-file-name "inits/yaml"))
 (load (local-file-name "inits/prettify-symbols"))
 (load (local-file-name "inits/helm"))
 (load (local-file-name "inits/lsp"))
