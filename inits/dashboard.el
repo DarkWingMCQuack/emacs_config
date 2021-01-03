@@ -1,7 +1,7 @@
 (use-package dashboard
   :custom
   (dashboard-startup-banner "~/.emacs.d/gnu2.png")
-  (dashboard-image-banner-max-height 10)
+  (dashboard-image-banner-max-height 100)
   (dashboard-init-info nil)
   (dashboard-set-init-info nil)
   (dashboard-set-footer nil)
