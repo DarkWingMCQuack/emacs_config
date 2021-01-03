@@ -37,5 +37,8 @@
   :after magit
   :hook (magit-mode . magit-todos-mode))
 
+(use-package forge
+  :after magit)
+
 (use-package gitignore-mode
   :mode ("/\\.gitignore\\'"))
