@@ -2,9 +2,18 @@
   :custom
   (lsp-enable-snippet t)
   (lsp-print-io nil)
+  (lsp-enable-completion-at-point t)
+  (lsp-enable-xref t)
+  (lsp-enable-indentation t)
+  (lsp-semantic-tokens-enable nil)
+  (lsp-signature-auto-activate t)
+  (lsp-signature-render-documentation t)
+  (lsp-enable-text-document-color t)
+  (lsp-headerline-breadcrumb-enable nil)
   (lsp-trace nil)
   (lsp-print-performance nil)
   (lsp-auto-guess-root t)
+  (lsp-modeline-code-actions-segments '(count icon name))
   (lsp-clients-clangd-args
    '("-j=4"
 	 "--background-index"
@@ -25,7 +34,7 @@
   (my-leader 'lsp-mode-map
 	:states 'normal
 	"TAB" '(lsp-format-buffer :wk "format buffer")
-	"s d" '(lsp-ui :wk "show documentation"))
+	"s d" '(lsp-ui-doc-glance :wk "show documentation"))
 
   (general-define-key
    :keymaps 'lsp-mode-map
@@ -57,11 +66,11 @@
   ;; lsp-ui-flycheck
   (lsp-ui-flycheck-enable t)
   ;; lsp-ui-sideline
-  (lsp-ui-sideline-enable nil)
+  (lsp-ui-sideline-enable t)
   (lsp-ui-sideline-ignore-duplicate t)
-  (lsp-ui-sideline-show-symbol t)
-  (lsp-ui-sideline-show-hover t)
-  (lsp-ui-sideline-show-diagnostics nil)
+  (lsp-ui-sideline-show-symbol nil)
+  (lsp-ui-sideline-show-hover nil)
+  (lsp-ui-sideline-show-diagnostics t)
   (lsp-ui-sideline-show-code-actions t)
   (lsp-ui-peek-enable t)
   (lsp-ui-peek-peek-height 20)
