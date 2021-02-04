@@ -8,6 +8,11 @@
 		 (interactive)
 		 (magit-mode-bury-buffer t)))
 
+  (my-leader
+	"g g" '(magit-status :wk "magit status")
+	"g t" '(magit-todos-list :wk "show todos")
+	"g p" '(magit-push :wk "push"))
+
   (general-define-key
    :keymaps 'transient-map
    "q" 'transient-quit-one
@@ -22,16 +27,6 @@
    :keymaps 'transient-sticky-map
    "q" 'transient-quit-seq
    "<escape>" 'transient-quit-seq))
-
-(use-package evil-magit
-  :after evil
-  :init
-  (evil-magit-init)
-  :general
-  (my-leader
-	"g g" '(magit-status :wk "magit status")
-	"g t" '(magit-todos-list :wk "show todos")
-	"g p" '(magit-push :wk "push")))
 
 (use-package magit-todos
   :after magit
