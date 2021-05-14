@@ -1,5 +1,10 @@
 (use-package lsp-mode
   :custom
+  (lsp-completion-provider :capf)
+  (company-lsp-cache-candidates t) ;; auto, t(always using a cache), or nil
+  (company-lsp-async t)
+  (company-lsp-enable-snippet t)
+  (company-lsp-enable-recompletion t)
   (lsp-enable-snippet t)
   (lsp-print-io nil)
   (lsp-enable-completion-at-point t)
@@ -42,15 +47,6 @@
    "c w" '(lsp-execute-code-action :wk "code action")
    "g d" '(lsp-find-definition :wk "goto definition")))
 
-
-(use-package company-lsp
-  :after company lsp-mode
-  :custom
-  (lsp-completion-provider :capf)
-  (company-lsp-cache-candidates t) ;; auto, t(always using a cache), or nil
-  (company-lsp-async t)
-  (company-lsp-enable-snippet t)
-  (company-lsp-enable-recompletion t))
 
 (use-package lsp-ui
   :after lsp-mode
