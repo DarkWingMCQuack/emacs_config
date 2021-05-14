@@ -30,6 +30,9 @@
 
 (load (local-file-name "inits/general"))
 
+(load (local-file-name "inits/fonts"))
+
+
 (load (local-file-name "inits/auto-package-updater"))
 (load (local-file-name "inits/dired"))
 (load (local-file-name "inits/regexp"))
