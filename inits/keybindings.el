@@ -17,9 +17,13 @@
 
 (defun my-open-term()
   (interactive)
-  (split-window-below -15)
-  (other-window -1)
-  (term "/bin/bash"))
+  (if (string-equal (buffer-name) "*terminal*")
+	  (delete-window)
+	(progn
+	  (split-window-below -15)
+	  (other-window -1)
+	  (term "/bin/fish")
+	  (evil-normal-state))))
 
 (defun my-format-buffer ()
   (interactive)
