@@ -34,6 +34,9 @@
   (rust-mode . lsp)
   (scala-mode . lsp)
   (lsp-mode . lsp-lens-mode)
+  (before-save . lsp-format-buffer)
+
+  
 
   :general
   (my-leader 'lsp-mode-map
