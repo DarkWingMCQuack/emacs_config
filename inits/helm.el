@@ -26,9 +26,9 @@
   (advice-add 'helm-execute-persistent-action :around #'helm-find-files-navigate-forward)
 
   (defun helm-find-files-navigate-back (orig-fun &rest args)
-  (if (= (length helm-pattern) (length (helm-find-files-initial-input)))
-      (helm-find-files-up-one-level 1)
-    (apply orig-fun args)))
+	(if (= (length helm-pattern) (length (helm-find-files-initial-input)))
+		(helm-find-files-up-one-level 1)
+      (apply orig-fun args)))
 
   (advice-add 'helm-ff-delete-char-backward :around #'helm-find-files-navigate-back)
 
