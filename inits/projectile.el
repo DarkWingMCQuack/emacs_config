@@ -16,12 +16,12 @@
 
 
 (use-package helm-projectile
-  :after (projectile helm)
-  :init
-  (helm-projectile-on)
-  :custom
-  (helm-for-files-preferred-list
-   '(helm-source-buffers-list
+ :after (projectile helm)
+ :init
+ (helm-projectile-on)
+ :custom
+ (helm-for-files-preferred-list
+  '(helm-source-buffers-list
 	 helm-source-projectile-files-list
 	 helm-source-recentf
 	 helm-source-bookmarks
