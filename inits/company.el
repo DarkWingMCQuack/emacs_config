@@ -12,6 +12,9 @@
   (company-selection-wrap-around t)
   (company-require-match 'never)
 
+  ;; width of the popup
+  (company-tooltip-minimum-width 65)
+  (company-tooltip-maximum-width 65)
   :general
   (general-define-key
    :keymaps 'company-active-map
