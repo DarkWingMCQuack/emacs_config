@@ -24,8 +24,8 @@
 
 
 ;;load core
-(load (local-file-name "core/core-server"))
 (load (local-file-name "core/core-packages"))
+(load (local-file-name "core/core-server"))
 (load (local-file-name "core/core-env"))
 
 (load (local-file-name "inits/general"))
@@ -37,11 +37,10 @@
 (load (local-file-name "inits/dired"))
 (load (local-file-name "inits/regexp"))
 (load (local-file-name "inits/evil"))
-(load (local-file-name "inits/snipe"))
 (load (local-file-name "inits/avy"))
 (load (local-file-name "inits/yaml"))
 (load (local-file-name "inits/prettify-symbols"))
-(load (local-file-name "inits/helm"))
+(load (local-file-name "inits/ivy"))
 (load (local-file-name "inits/lsp"))
 (load (local-file-name "inits/cquery"))
 (load (local-file-name "inits/go"))
@@ -50,6 +49,7 @@
 (load (local-file-name "inits/cmake"))
 (load (local-file-name "inits/cpp"))
 (load (local-file-name "inits/crux"))
+(load (local-file-name "inits/swiper"))
 
 ;;load the rest
 (load (local-file-name "inits/ui-config"))

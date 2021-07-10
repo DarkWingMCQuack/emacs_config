@@ -33,8 +33,6 @@
 
 (my-leader
   :keymaps 'override
-  "SPC" '(helm-M-x :wk "execute command")
-
   "t" '(my-open-term :wk "open terminal")
 
   "q q" '(save-buffers-kill-terminal :wk "fill screen")
@@ -57,5 +55,4 @@
 
   "f s" '(save-buffer :wk "save current buffer")
   "f r" '(crux-rename-file-and-buffer :wk "rename file")
-  "f d" '(dired :wk "dired")
-  "f f" '(helm-find-files :wk "find file"))
+  "f d" '(dired :wk "dired"))

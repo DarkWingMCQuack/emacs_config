@@ -54,27 +54,29 @@
 (use-package lsp-ui
   :after lsp-mode
   :custom
-  (lsp-ui-doc-enable nil)
+
+  (lsp-ui-doc-enable t)
   (lsp-ui-doc-header t)
+  (lsp-ui-doc-show-with-cursor nil)
+  (lsp-ui-doc-show-with-mouse nil)
   (lsp-ui-doc-include-signature t)
   (lsp-ui-doc-position 'at-point) ;; top, bottom, or at-point
   (lsp-ui-doc-max-width 120)
   (lsp-ui-doc-max-height 30)
-  (lsp-ui-doc-use-childframe t)
+  ;; (lsp-ui-doc-use-childframe t)
   (lsp-ui-doc-use-webkit t)
+  (lsp-ui-doc-focus-frame t)
+
   ;; lsp-ui-flycheck
   (lsp-ui-flycheck-enable t)
+
   ;; lsp-ui-sideline
-  (lsp-ui-sideline-enable t)
-  (lsp-ui-sideline-ignore-duplicate t)
-  (lsp-ui-sideline-show-symbol nil)
-  (lsp-ui-sideline-show-hover nil)
-  (lsp-ui-sideline-show-diagnostics t)
-  (lsp-ui-sideline-show-code-actions t)
+  (lsp-ui-sideline-enable nil)
   (lsp-ui-peek-enable t)
   (lsp-ui-peek-peek-height 20)
   (lsp-ui-peek-list-width 50)
   (lsp-ui-peek-fontify 'on-demand) ;; never, on-demand, or always
+
   :hook (lsp-mode . lsp-ui-mode))
 
 ;; Add metals backend for lsp-mode
