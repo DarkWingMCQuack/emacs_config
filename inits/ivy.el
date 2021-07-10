@@ -1,6 +1,9 @@
 (use-package ivy
   :config
   (ivy-mode)
+  :custom
+  (ivy-re-builders-alist
+   '((t . ivy--regex-fuzzy)))
   :general
   (general-define-key
    :keymaps 'ivy-minibuffer-map
