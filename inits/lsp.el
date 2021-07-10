@@ -34,7 +34,9 @@
   (rust-mode . lsp)
   (scala-mode . lsp)
   (lsp-mode . lsp-lens-mode)
-  (before-save . lsp-format-buffer)
+  ;; only format-on-save if lsp-mode is active
+  (lsp-mode . (lambda ()
+				(add-hook 'before-save-hook 'lsp-format-buffer nil 'make-it-local)))
 
   
 
