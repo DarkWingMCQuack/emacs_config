@@ -59,3 +59,5 @@
   ;; as well
   :custom
   (xref-show-xrefs-function #'ivy-xref-show-xrefs "Use Ivy to show xrefs"))
+
+(use-package lsp-ivy)
