@@ -4,10 +4,16 @@
   (flycheck-check-syntax-automatically '(mode-enabled save))
   :config
   (global-flycheck-mode)
+
+  (defun switch-flycheck-list-errors ()
+	(interactive)
+	(flycheck-list-errors)
+	(pop-to-buffer "*Flycheck errors*"))
+
   :general
   (my-leader 'flycheck-mode-map
 	:states 'normal
-	"s e" '(flycheck-list-errors :wk "list errors")))
+	"s e" '(switch-flycheck-list-errors :wk "list errors")))
 
 
 (use-package flycheck-pos-tip
