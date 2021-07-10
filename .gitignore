@@ -67,4 +67,5 @@ session.*
 company-statistics-cache.el
 /forge-database.sqlite
 smex-items
+amx-items
 ido.last
