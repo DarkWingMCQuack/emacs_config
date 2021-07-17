@@ -6,7 +6,7 @@
         ("org" . "https://orgmode.org/elpa/")
         ("gnu" . "https://elpa.gnu.org/packages/")
         ("melpa" . "https://melpa.org/packages/")
-        ("marmalade" . "http://marmalade-repo.org/packages/")
+        ;; ("marmalade" . "http://marmalade-repo.org/packages/")
         ))
 
 (package-initialize)
@@ -19,7 +19,7 @@
 ;; a list of pkgs to programmatically install
 ;; ensure installed via package.el
 (setq my-package-list '(use-package
-                         exec-path-from-shell))
+                           exec-path-from-shell))
 
 ;; programmatically install/ensure installed
 ;; pkgs in your personal list
