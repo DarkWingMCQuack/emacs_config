@@ -78,8 +78,8 @@
 (load (local-file-name "inits/typescript"))
 (load (local-file-name "inits/dashboard"))
 (load (local-file-name "inits/org"))
-
 (load (local-file-name "inits/keybindings"))
+(load (local-file-name "inits/subword"))
 
 
 ;;custom.el bullshit
