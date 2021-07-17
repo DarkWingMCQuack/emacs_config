@@ -1,5 +1,5 @@
 (use-package dired
-  :ensure nil
+  :straight (:type built-in)
   :custom
   (dired-recursive-deletes 'always)
   (dired-recursive-copies  'always)

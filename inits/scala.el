@@ -5,7 +5,6 @@
 ;; Enable sbt mode for executing sbt commands
 (use-package sbt-mode
   :commands sbt-start sbt-command
-  :pin melpa
   :custom
   ;; sbt-supershell kills sbt-mode:  https://github.com/hvesalai/emacs-sbt-mode/issues/152
   (sbt:program-options '("-Dsbt.supershell=false"))

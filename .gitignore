@@ -58,6 +58,7 @@ cache/
 snippets/
 auto-save-list/
 url/
+straight/
 projectile-bookmarks.eld
 custom.el
 .last-package-update-day

@@ -91,13 +91,4 @@
 (use-package dap-mode
   :hook
   (lsp-mode . dap-mode)
-  (lsp-mode . dap-ui-mode)
-
-  :config
-  (require 'dap-gdb-lldb)   ; download and expand lldb-vscode to the =~/.extensions/webfreak.debug=
-  (require 'dap-go)     ; download and expand vscode-go-extenstion to the =~/.extensions/go=
-  (require 'dap-python)
-  (use-package dap-ui
-	:ensure nil
-	:config
-	(dap-ui-mode 1)))
+  (lsp-mode . dap-ui-mode))

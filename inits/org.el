@@ -44,15 +44,15 @@
   (org-mode . (lambda () (org-bullets-mode 1))))
 
 (use-package org-agenda
-  :ensure nil
+  :straight (:type built-in)
   :custom
   (org-agenda-files (directory-files-recursively
 					 "~/Nextcloud/notes/"
 					 "\.org$"))
 
-; Tasks mit Datum in der Agenda ausblenden, wenn sie bereits erledigt sind:
-(org-agenda-skip-deadline-if-done t)
-(org-agenda-skip-scheduled-if-done t)
+  ;; Tasks mit Datum in der Agenda ausblenden, wenn sie bereits erledigt sind:
+  (org-agenda-skip-deadline-if-done t)
+  (org-agenda-skip-scheduled-if-done t)
   
   :general
   (my-leader
@@ -64,7 +64,7 @@
   :hook
   (org-mode . evil-org-mode)
   (evil-org-mode . (lambda ()
-						  (evil-org-set-key-theme)))
+					 (evil-org-set-key-theme)))
   :config
   (require 'evil-org-agenda)
   (evil-org-agenda-set-keys))

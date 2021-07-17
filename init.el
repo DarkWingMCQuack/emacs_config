@@ -33,7 +33,7 @@
 (load (local-file-name "inits/fonts"))
 
 
-(load (local-file-name "inits/auto-package-updater"))
+;; (load (local-file-name "inits/auto-package-updater"))
 (load (local-file-name "inits/dired"))
 (load (local-file-name "inits/regexp"))
 (load (local-file-name "inits/evil"))
@@ -42,7 +42,6 @@
 (load (local-file-name "inits/prettify-symbols"))
 (load (local-file-name "inits/ivy"))
 (load (local-file-name "inits/lsp"))
-(load (local-file-name "inits/cquery"))
 (load (local-file-name "inits/go"))
 (load (local-file-name "inits/rust"))
 (load (local-file-name "inits/my-return"))
