@@ -1,9 +1,9 @@
 (use-package ivy
   :config
   (ivy-mode)
-  :custom
-  (ivy-re-builders-alist
-   '((t . ivy--regex-fuzzy)))
+  (setq ivy-re-builders-alist
+		'((t . ivy--regex-fuzzy))) 
+
   :general
   (general-define-key
    :keymaps 'ivy-minibuffer-map
@@ -13,6 +13,7 @@
 (use-package counsel
   :config
   (counsel-mode)
+
   :general
   (my-leader
 	"f f" '(counsel-find-file :wk "find file"))
@@ -60,4 +61,5 @@
   :custom
   (xref-show-xrefs-function #'ivy-xref-show-xrefs "Use Ivy to show xrefs"))
 
-(use-package lsp-ivy)
+(use-package lsp-ivy
+  :after (ivy lsp))
