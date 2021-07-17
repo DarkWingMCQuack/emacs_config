@@ -17,7 +17,7 @@
    "RET" '(neotree-enter :wk "enter")
    "c" '(neotree-create-node :wk "create node")
    "U" '(neotree-select-up-node :wk "go up a directory")
-   "c" '(neotree-rename-node :wk "rename node")
+   "r" '(neotree-rename-node :wk "rename node")
    "d" '(neotree-delete-node :wk "delete node")
    "C" '(neotree-change-root :wk "change root")
    "H" '(neotree-hidden-file-toggle :wk "hidden files toggle")
